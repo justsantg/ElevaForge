@@ -19,18 +19,18 @@ export class ServicesComponent implements OnInit {
   services: Service[] = [
     {
       icon: 'fas fa-code',
-      title: 'Desarrollo Web',
-      description: 'Creamos aplicaciones web modernas, responsivas y optimizadas para el mejor rendimiento y experiencia de usuario.'
+      title: 'POS + Gestor de inventarios',
+      description: 'Controla tus ventas de stock en tiempo real, evita perdidas y optimiza tu negocio con un sistema todo en uno.'
     },
     {
       icon: 'fas fa-mobile-alt',
-      title: 'Apps Móviles',
-      description: 'Desarrollamos aplicaciones móviles nativas e híbridas para iOS y Android con interfaces intuitivas.'
+      title: 'ChatBot',
+      description: 'Atiende a tus clientes 24/7, resuelve dudas, toma pedidos y automatiza respuestas.'
     },
     {
       icon: 'fas fa-cloud',
-      title: 'Soluciones Cloud',
-      description: 'Implementamos arquitecturas en la nube escalables y seguras para optimizar tus recursos tecnológicos.'
+      title: 'Aplicacion Web',
+      description: 'Lleva tu negocio al mundo digital con una plataforma a la medida, accesible desde cualquier dispositivo.'
     },
     {
       icon: 'fas fa-database',
@@ -39,13 +39,13 @@ export class ServicesComponent implements OnInit {
     },
     {
       icon: 'fas fa-shield-alt',
-      title: 'Ciberseguridad',
-      description: 'Protegemos tus sistemas con las mejores prácticas de seguridad y auditorías especializadas.'
+      title: 'Software personalizado',
+      description: 'Optimiza los procesos internos de tu negocio con soluciones de software pensadas para ti.'
     },
     {
       icon: 'fas fa-chart-line',
-      title: 'Analytics & BI',
-      description: 'Transformamos tus datos en insights valiosos con herramientas de análisis y business intelligence.'
+      title: 'Aplicaciones para ti',
+      description: 'Transformamos tus ideas en soluciones de software innovadoras.'
     }
   ];
 

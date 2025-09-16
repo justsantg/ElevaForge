@@ -84,7 +84,7 @@ $orange-accent: #F27405;
   @include button-hover-effect;
 
   &.btn-primary {
-    background: linear-gradient(45deg, $blue-accent, $yellow-accent);
+    background: $yellow-accent;
     color: $primary-dark;
 
     &:hover {

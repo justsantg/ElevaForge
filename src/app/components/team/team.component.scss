@@ -14,85 +14,115 @@ $orange-accent: #F27405;
 
 // Team Section
 .team {
-  padding: 6rem 2rem;
-  background: $primary-dark;
+  padding: 4rem 2rem;
+  background: #0f1119;
+  color: white;
+  text-align: center;
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #f9a825;
+  }
 
   .team-carousel {
     position: relative;
     overflow: hidden;
-    border-radius: 20px;
   }
 
   .team-container {
     display: flex;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
+    gap: 2rem;
   }
 
   .team-member {
-    min-width: 300px;
-    margin: 0 1rem;
-    background: linear-gradient(145deg, rgba(94, 186, 242, 0.1), rgba(242, 165, 22, 0.05));
-    border-radius: 20px;
+    background: #1a1c24;
     padding: 2rem;
-    text-align: center;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    min-width: 250px;
+    max-width: 300px;
+    flex: 0 0 auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    }
 
     .member-photo {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      background: linear-gradient(45deg, $blue-accent, $yellow-accent);
+      width: 100px;
+      height: 100px;
       margin: 0 auto 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      color: $primary-dark;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #f9a825;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
-    .member-name {
-      font-size: 1.3rem;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-      color: $yellow-accent;
-    }
+    .member-info {
+      .member-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 0.3rem;
+      }
 
-    .member-role {
-      color: $blue-accent;
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
+      .member-role {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #f9a825;
+        margin-bottom: 0.5rem;
+      }
 
-    p {
-      color: white;
-      line-height: 1.6;
+      .member-description {
+        font-size: 0.85rem;
+        color: #ccc;
+      }
     }
   }
 
   .carousel-controls {
     display: flex;
     justify-content: center;
+    margin-top: 1.5rem;
     gap: 1rem;
-    margin-top: 2rem;
 
     .carousel-btn {
-      width: 50px;
-      height: 50px;
-      border: none;
+      background: #1a1c24; // círculo oscuro
+      border: 2px solid #f9a825; // borde dorado
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
-      background: $blue-accent;
-      color: $primary-dark;
-      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
       transition: all 0.3s ease;
 
+      i {
+        font-size: 1.2rem;
+        color: #f9a825; // flecha dorada
+      }
+
       &:hover {
-        background: $yellow-accent;
-        transform: scale(1.1);
+        background: #f9a825;
+
+        i {
+          color: #0f1119; // flecha se invierte (oscura sobre dorado)
+        }
       }
     }
   }
+
 }
+
 
 // Container utility
 .container {
@@ -105,7 +135,7 @@ $orange-accent: #F27405;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  @include gradient-text;
+  color: $yellow-accent;
 }
 
 // Animation
@@ -114,6 +144,7 @@ $orange-accent: #F27405;
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

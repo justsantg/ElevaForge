@@ -17,7 +17,7 @@ interface Contact {
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  contactEmail = 'info@elevaforge.com';
+  contactEmail = 'elevaforge@gmail.com';
   
   contact: Contact = {
     name: '',

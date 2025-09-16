@@ -24,28 +24,28 @@ export class TeamComponent implements OnInit, OnDestroy {
 
   teamMembers: TeamMember[] = [
     {
-      name: 'Ana García',
-      role: 'CEO & Fundadora',
+      name: 'Luis Ceron Muñoz',
+      role: 'CEO & Fundador',
       description: 'Líder visionaria con más de 10 años de experiencia en tecnología y gestión empresarial.'
     },
     {
-      name: 'Carlos López',
+      name: 'Jhonatan Diaz Vásquez',
       role: 'CTO',
       description: 'Arquitecto de software especializado en tecnologías emergentes y desarrollo de sistemas complejos.'
     },
     {
-      name: 'María Rodríguez',
+      name: 'Santiago Reyes Sanchez',
       role: 'Lead Developer',
       description: 'Desarrolladora full-stack experta en Angular, React y tecnologías de backend modernas.'
     },
     {
-      name: 'David Chen',
+      name: 'Miguel Angel Cajigas',
       role: 'UX/UI Designer',
       description: 'Diseñador creativo enfocado en crear experiencias de usuario excepcionales e interfaces intuitivas.'
     },
     {
-      name: 'Sophie Martin',
-      role: 'DevOps Engineer',
+      name: 'Camilo',
+      role: 'Diseñador Grafico ',
       description: 'Especialista en automatización, CI/CD y arquitecturas cloud para optimizar los procesos de desarrollo.'
     }
   ];

@@ -60,7 +60,7 @@ $orange-accent: #F27405;
 
     .service-icon {
       font-size: 3rem;
-      color: $blue-accent;
+      color: white;
       margin-bottom: 1rem;
     }
 
@@ -88,7 +88,7 @@ $orange-accent: #F27405;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  @include gradient-text;
+  color: $yellow-accent;
 }
 
 // Animation

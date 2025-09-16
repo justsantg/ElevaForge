@@ -5,112 +5,79 @@ $blue-accent: #5EBAF2;
 $yellow-accent: #F2A516;
 $orange-accent: #F27405;
 
-@mixin gradient-text {
-  background: linear-gradient(45deg, $blue-accent, $yellow-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+h1 {
+  color: $yellow-accent;
 }
 
 .header {
-  position: fixed;
+  background: #0f1119; // color sólido elegante
+  padding: 0.8rem 2rem;
+  position: sticky;
   top: 0;
-  width: 100%;
-  background: rgba(21, 24, 38, 0.95);
-  backdrop-filter: blur(10px);
   z-index: 1000;
-  transition: all 0.3s ease;
+}
 
-  .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
   }
 
-  .logo {
-    font-size: 1.8rem;
+  .logo-text {
+    font-size: 1.4rem;
     font-weight: bold;
-    @include gradient-text;
+    color: #f9a825; // naranja corporativo
   }
+}
 
-  .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 
-    a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      font-weight: 500;
+  li a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-weight: 500;
+    transition: color 0.3s ease;
 
-      &:hover {
-        color: $blue-accent;
-      }
-    }
-  }
-
-  .mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1001;
-    
-    i {
-      transition: transform 0.3s ease;
-    }
-  }
-
-  // Mobile Navigation
-  .mobile-nav-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(21, 24, 38, 0.98);
-    backdrop-filter: blur(20px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 999;
-
-    &.active {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    .mobile-nav-links {
-      list-style: none;
-      text-align: center;
-
-      li {
-        margin: 2rem 0;
-        
-        a {
-          color: white;
-          text-decoration: none;
-          font-size: 1.5rem;
-          font-weight: 600;
-          transition: color 0.3s ease;
-          
-          &:hover {
-            color: $blue-accent;
-          }
-        }
-      }
+    &:hover {
+      color: #f9a825; // hover naranja
     }
   }
 }
+
+/* Botón menú móvil oculto en desktop */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* 🔹 Responsivo */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
 
 // Responsive Design
 @media (max-width: 768px) {
@@ -130,5 +97,24 @@ $orange-accent: #F27405;
     .nav-container {
       padding: 1rem;
     }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white; // ajusta según tu tema
+  gap: 10px;
+
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
   }
 }
